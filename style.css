@@ -171,6 +171,17 @@ body {
     color: #223f45;
     justify-self: flex-end;
     cursor: pointer;
+    font-size: 1.5rem;
+}
+
+#btn1:hover {
+    text-decoration: underline;
+    color: #223f45;
+}
+
+#btn2:hover {
+    text-decoration: underline;
+    color: #223f45;
 }
 
 #ddd {
