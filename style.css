@@ -7,13 +7,16 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    background-image: url(bg.jpg);
     z-index: -1;
     overflow: hidden;
 }
 
 #heading {
-    color: #000000;
-    text-shadow: -4px 1px 16px black;
+    /* color: #000000;
+    text-shadow: -4px 1px 16px black; */
+    color: #f3f3f3;
+    text-shadow: -4px 1px 16px #999292;
     font-size: 5rem;
     font-family: 'Zen Dots', cursive;
     text-align: center;
