@@ -1,11 +1,17 @@
 //clock global variables
-let audio = new Audio('beep.mp3');
 let check = 0;
 let hours = document.getElementById("hours");
 let minutes = document.getElementById("minutes");
 let seconds = document.getElementById("seconds");
 let am = document.getElementById("am");
+
+//Audio files
+const audio = new Audio('https://cdn.pixabay.com/download/audio/2021/08/09/audio_a4637e27f0.mp3?filename=smartphone_vibrating_alarm_silent-    7040.mp3');
+const audioFile = 'ringtone.mp3';
+const audio1 = new Audio(audioFile);
+
 let [mer, a, h, s, m, d] = [0, 0, 0, 0, 0, 0]; //destructuring
+
 //useful functions
 const appear = (x) => { return (x < 10 ? "0" + x : x); } //add 0 to number < 10
 const convert = (x) => { return Number.parseInt(x) }   //convert string to number
@@ -49,8 +55,11 @@ const set = () => {
 }
 const playsound = () => {
     hider4(popUp[1]);
-    audio.loop = true
     audio.play();
+    audio.loop = true
+
+    audio1.play();
+    audio1.loop = true
 }
 document.addEventListener('DOMContentLoaded', function () {
     let instances = M.Timepicker.init(alarm, {});
