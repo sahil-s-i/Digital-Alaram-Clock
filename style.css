@@ -70,7 +70,7 @@ body {
     border: 0.4px solid black;
     box-shadow: 2px -2px 40px 1px black;
     transition: all 200ms ease-in-out;
-    right: 26.8rem;
+    /* right: 26.8rem; */
 }
 
 #seconds {
