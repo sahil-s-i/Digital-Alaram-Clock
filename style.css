@@ -13,8 +13,7 @@ body {
 }
 
 #heading {
-    /* color: #000000;
-    text-shadow: -4px 1px 16px black; */
+    /* text-shadow: -4px 1px 16px black; */
     color: #f3f3f3;
     text-shadow: -4px 1px 16px #999292;
     font-size: 5rem;
