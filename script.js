@@ -33,6 +33,7 @@ let blink = document.querySelectorAll(".blink2")
 setInterval((x) => { blink[0].classList.toggle("blinkthis") }, 520)
 setInterval((x) => { blink[1].classList.toggle("blinkthis") }, 520)
 setInterval(update, 100);
+
 //Alarm
 let popUp = document.querySelectorAll('.showbox');
 let alarm = document.querySelectorAll('.timepicker');
