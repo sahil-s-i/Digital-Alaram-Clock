@@ -14,3 +14,4 @@ visit : https://sahil-s-i.github.io/Digital-Alaram-Clock/
 5. Visual and Audible Alerts: When the alarm time is reached, experience a visually noticeable alert along with an audible alarm sound. Never miss an important event again!
 6. Cross-Browser Compatibility: The digital alarm clock has been tested and optimized to work across popular web browsers, ensuring a consistent experience for all users.
 7. Easily Extensible: The repository's modular structure and well-organized code make it easy to extend and customize the alarm clock's functionality to suit your specific needs.
+8. Responsive Design: Whether you're accessing the alarm clock on a desktop, tablet, or mobile device, the responsive design ensures a seamless experience across various screen sizes.
