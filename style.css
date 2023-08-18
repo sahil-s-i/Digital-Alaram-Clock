@@ -195,3 +195,27 @@ body {
 .showbox-option:nth-child(2) {
     font-size: 2.4rem;
 }
+
+@media only screen and (min-width:300px) and (max-width:800px){
+    #heading{
+        width: 18rem;
+    }
+    
+    .showbox{
+        width: 20rem;
+        left: 10%;
+        right: 10vw;
+    }
+}
+
+
+.countdown-timer {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+}
