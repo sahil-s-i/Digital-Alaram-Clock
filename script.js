@@ -34,34 +34,69 @@ setInterval((x) => { blink[0].classList.toggle("blinkthis") }, 520)
 setInterval((x) => { blink[1].classList.toggle("blinkthis") }, 520)
 setInterval(update, 100);
 
-//Alarm
+// //Alarm
+// let popUp = document.querySelectorAll('.showbox');
+// let alarm = document.querySelectorAll('.timepicker');
+// let alarmObj = {}
+// let alarmInterval;
+// const set = () => {
+//     let alarmString = alarm[0].value;
+//     alarmObj.hour = convert(alarmString.substr(0, 2));
+//     alarmObj.min = convert(alarmString.substr(3, 3));
+//     alarmObj.mer = alarmString.substr(6, 2);
+//     hider4(popUp[0]);
+//     alarmInterval = (alarmObj.hour + 12 - convert(h)) * 3600;  //hour to minutes
+//     if (alarmObj.min < convert(m) || mer.toUpperCase() != alarmObj.mer.toUpperCase()) {
+//         alarmInterval += 24 * 3600   //sets alarm for next day 
+//     }
+//     alarmInterval += (alarmObj.min - convert(m)) * 60;     //minutes to seconds
+//     alarmInterval -= s;   //rectifies manual delay while setting Alarm
+//     alarmInterval = alarmInterval * 1000                   //to milliseconds
+//     setTimeout(playsound, alarmInterval)
+// }
+// const playsound = () => {
+//     hider4(popUp[1]);
+//     audio.play();
+//     audio.loop = true
+
+//     audio1.play();
+//     audio1.loop = true
+// }
+// document.addEventListener('DOMContentLoaded', function () {
+//     let instances = M.Timepicker.init(alarm, {});
+// });
+
+// Alarm
 let popUp = document.querySelectorAll('.showbox');
 let alarm = document.querySelectorAll('.timepicker');
-let alarmObj = {}
+let alarmObj = {};
 let alarmInterval;
+
+// Function to play the alarm sound
+const playAlarmSound = () => {
+    hider4(popUp[1]);
+    audio.play();
+    audio.loop = true
+    audio1.play();
+    audio1.loop = true
+};
+
 const set = () => {
     let alarmString = alarm[0].value;
     alarmObj.hour = convert(alarmString.substr(0, 2));
     alarmObj.min = convert(alarmString.substr(3, 3));
     alarmObj.mer = alarmString.substr(6, 2);
     hider4(popUp[0]);
-    alarmInterval = (alarmObj.hour + 12 - convert(h)) * 3600;  //hour to minutes
-    if (alarmObj.min < convert(m) || mer.toUpperCase() != alarmObj.mer.toUpperCase()) {
-        alarmInterval += 24 * 3600   //sets alarm for next day 
+    let currentTime = new Date();
+    let alarmTime = new Date();
+    alarmTime.setHours(alarmObj.hour, alarmObj.min, 0); // Set alarm time
+    if (alarmTime <= currentTime) {
+        alarmTime.setDate(alarmTime.getDate() + 1); // Set alarm for the next day if the alarm time has already passed for today
     }
-    alarmInterval += (alarmObj.min - convert(m)) * 60;     //minutes to seconds
-    alarmInterval -= s;   //rectifies manual delay while setting Alarm
-    alarmInterval = alarmInterval * 1000                   //to milliseconds
-    setTimeout(playsound, alarmInterval)
-}
-const playsound = () => {
-    hider4(popUp[1]);
-    audio.play();
-    audio.loop = true
+    alarmInterval = alarmTime - currentTime; // Calculate the time difference in milliseconds
+    setTimeout(playAlarmSound, alarmInterval);
+};
 
-    audio1.play();
-    audio1.loop = true
-}
 document.addEventListener('DOMContentLoaded', function () {
     let instances = M.Timepicker.init(alarm, {});
 });
