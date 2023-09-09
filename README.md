@@ -2,7 +2,8 @@
 
 Welcome to the Digital-Alarm-Clock repository! This project showcases a fully functional digital alarm clock created using HTML, CSS, and JavaScript. Whether you're a coding enthusiast looking to explore web development or someone in need of a customizable digital alarm clock, this repository has got you covered.
 
-visit : https://sahil-s-i.github.io/Digital-Alaram-Clock/
+
+### &nbsp; Visit site :arrow_upper_right: : &nbsp; [Click ME !!!](https://sahil-s-i.github.io/Digital-Alaram-Clock/)
 
 
 #### Features:
